@@ -6,27 +6,12 @@ const mongodb = require("mongodb");
 const client = mongodb.MongoClient;
 const cors = require("cors");
 
-// const halls = require("./data");
-
 const db_url = process.env.DB_URL;
-
-//list of halls
-// const halls = [{
-//     name: 'test',
-//     seatingcapacity: '32',
-//     price: '3200',
-//     amenties: ['Full Air Conditioned', 'Welcome Drinks'],
-//     id: 1
-// }];
-
-// const bookings = [];
-// let id = 1;
 
 const app = express();
 const port = 4000 || process.env.PORT;
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.get("/", (req, res) => {
