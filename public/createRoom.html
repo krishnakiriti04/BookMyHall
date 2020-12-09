@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall Booking System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <h2>BookMyHall</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-auto" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">CreateRoom</a>
+                <a class="nav-item nav-link" href="bookRoom.html">Book Now</a>
+                <a class="nav-item nav-link" href="mybookings.html">All Bookings</a>
+            </div>
+        </div>
+    </nav>
+    <div class="text-center">
+        <h1>Create New Room</h1>
+    </div>
+    <div class="room-form w-50 mx-auto">
+        <form onsubmit="addRoom();return false;" method="POST">
+            <div class="form-group">
+                <label for="hallname">Name</label>
+                <input type="text" class="form-control" id="hallname" placeholder="Name of the Hall">
+            </div>
+            <div class="form-group">
+                <label for="seatingcapacity">Seating Capacity</label>
+                <input type="number" class="form-control" id="seatingcapacity" placeholder="Seating Capacity">
+            </div>
+            <div class="form-group">
+                <label for="amenties">Amenties</label>
+                <select multiple class="form-control" id="amenties">
+                <option>Full Air Conditioned</option>
+                <option>Decoration</option>
+                <option>Welcome Drinks</option>
+                <option>Priests</option>
+                <option>Electricity</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price <small>/ hr </small></label>
+                <input class="form-control" id="price"></input>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Add Room</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="createRoom.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"  crossorigin="anonymous"></script>
+</body>
+
+</html>
