@@ -8,7 +8,7 @@ const cors = require("cors");
 const db_url = process.env.DB_URL;
 
 const app = express();
-const port = 4000 || process.env.PORT;
+const port = process.env.PORT || 4000;
 
 app.use(bodyParser.json());
 app.use(cors());
