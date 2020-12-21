@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
 const dotenv = require("dotenv").config();
 const mongodb = require("mongodb");
 const client = mongodb.MongoClient;
